@@ -21,7 +21,7 @@ cssutils
 cycler
 decorator
 distlib
-Django==3.0.5
+Django==3.1.13
 django-admin-autocomplete-filter==0.6.1
 django-admin-json-editor==0.2.0
 django-admin-rangefilter==0.6.3
