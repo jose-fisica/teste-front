@@ -77,7 +77,7 @@ google-cloud-storage==1.31.2
 google-crc32c==1.0.0
 google-resumable-media==1.1.0
 googleapis-common-protos==1.52.0
-grpcio==1.32.0
+grpcio==1.62.2
 grpcio-status==1.62.2
 httplib2==0.18.1
 idna==2.9
@@ -116,7 +116,7 @@ Pillow==9.1.0
 platformdirs==4.2.2
 prompt-toolkit==3.0.5
 proto-plus==1.24.0
-protobuf==3.13.0
+protobuf==4.21.6
 psycopg2-binary==2.9.9
 ptyprocess==0.6.0
 pure_eval==0.2.3
