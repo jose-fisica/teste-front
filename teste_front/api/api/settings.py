@@ -18,7 +18,7 @@ SECRET_KEY = 'o=^ugslkltb$j*sz&)*magg$n%+j9w1nj0)qy2%(ibn=wo=b09'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost",'localhost:3000','http://localhost:3000','busy-sites-know.loca.lt']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
