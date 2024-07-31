@@ -28,7 +28,7 @@ cycler==0.11.0
 decorator==4.4.2
 dill==0.3.8
 distlib==0.3.1
-Django==3.0.1
+Django==3.0.5
 django-admin-autocomplete-filter==0.6.1
 django-admin-json-editor==0.2.0
 django-admin-rangefilter==0.6.3
