@@ -34,6 +34,6 @@ export default styled(PrivateRoute)`
     min-height: 100vh;
 
     .content-container{
-      padding-bottom: 238px;
+      padding-bottom: 0px;
     }
 `;

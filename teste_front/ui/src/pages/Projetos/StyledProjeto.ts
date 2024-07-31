@@ -4,7 +4,6 @@ import styled from "@emotion/styled/macro";
 import background from "../../assets/background.svg"
 
 export const BackgroundProjeto = styled.div`
-min-height: 100%;
 height: 92vh;
 width: 100vw;
 display: flex;

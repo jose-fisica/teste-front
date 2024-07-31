@@ -2,7 +2,7 @@ import axios, { AxiosError, AxiosRequestConfig, AxiosRequestHeaders } from 'axio
 import { getToken, clearToken } from './auth';
 
 const api = axios.create({
-  baseURL:'http://localhost:8000'
+  baseURL:'https://busy-sites-know.loca.lt/'
 });
 
 api.interceptors.request.use(

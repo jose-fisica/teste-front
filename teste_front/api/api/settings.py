@@ -18,7 +18,7 @@ SECRET_KEY = 'o=^ugslkltb$j*sz&)*magg$n%+j9w1nj0)qy2%(ibn=wo=b09'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost",'localhost:3000','http://localhost:3000']
+ALLOWED_HOSTS = ["localhost",'localhost:3000','http://localhost:3000','busy-sites-know.loca.lt']
 
 # Application definition
 
@@ -90,24 +90,30 @@ DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# db = os.getenv('DB_TYPE')
+db = os.getenv('DB_TYPE')
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'sql_server.pyodbc',
         'NAME': os.getenv('DATABASE_NAME'),
         'HOST': os.getenv('DATABASE_HOST'),
         'PORT': os.getenv('DATABASE_PORT', '1433'),
         'USER': os.getenv('DATABASE_USER'),
         'PASSWORD': os.getenv('DATABASE_PASSWORD'),
         'OPTIONS': {
-            'sslmode': 'require',
-            # 'options': '-c timezone=UTC',
+            'driver': os.getenv('DRIVERODBC', 'ODBC Driver 17 for SQL Server'),
+            'dsn': os.getenv('DATABASE_DSN'),
+            'host_is_server': True,
+            'autocommit': True,
+            'unicode_results': True,
+            'isolation_level': 'READ UNCOMMITTED',
+            'connection_timeout': 8,
+            'query_timeout': 8,
         },
     }
 }
 
-# Password validation
+
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -143,12 +149,10 @@ USE_L10N = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
-CORS_ORIGIN_WHITELIST = '__ALL__'
 
+CORS_ORIGIN_WHITELIST = ['http://localhost:3000',"https://chatty-wolves-battle.loca.lt"]
 
 API_HOST = os.getenv("API_HOST", "http://localhost:8000") 
-
-CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_EXPOSE_HEADERS = ['Content-Disposition']
 
